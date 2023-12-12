@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="quiz">
+			<div class="container">
+				<div class="quiz__inner">
+					<h2 class="quiz__title">Онлайн заявка</h2>
+					<p class="quiz__subtitle">Заполните контактную информацию</p>
+					<ul class="quiz__steps">
+						<li class="quiz__steps-item quiz__steps-item--active">Шаг 1</li>
+						<li class="quiz__steps-item">Шаг 2</li>
+						<li class="quiz__steps-item">Шаг 3</li>
+						<li class="quiz__steps-item">Шаг 4</li>
+						<li class="quiz__steps-item">Шаг 5</li>
+					</ul>
+
+					<div class="quiz__step quiz__step--active">
+						<div class="quiz__slider quiz__slider-sum">
+							<h3 class="quiz__slider-title">Минимальная сумма займа</h3>
+							<div class="quiz__slider-bot">
+								<h4 class="quiz__slider-bot-title">Сумма, сум</h4>
+								<input type="text" class="quiz__slider-bot-sum" />
+								<div class="quiz__slider-bot-range quiz__slider-range">
+									<input
+										class="quiz__slider-range-input"
+										type="range"
+										min="1000000"
+										max="500000000"
+										step="100"
+										value="50000000"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="quiz__slider quiz__slider-term">
+							<h3 class="quiz__slider-title">Минимальный срок займа</h3>
+							<div class="quiz__slider-bot">
+								<h4 class="quiz__slider-bot-title">Срок, мес.</h4>
+								<input type="text" class="quiz__slider-bot-sum" />
+								<div class="quiz__slider-bot-range quiz__slider-range">
+									<input
+										class="quiz__slider-range-input"
+										type="range"
+										min="1"
+										max="120"
+										step="1"
+										value="12"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="quiz__step second radio">
+						<div class="second__item radio__item">
+							<input
+								type="radio"
+								name="step2"
+								id="radio1"
+								value="Ипотека"
+								checked
+							/>
+							<label for="radio1">
+								<h3 class="second__item-title radio__item-title">Ипотека</h3>
+								<span class="second__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="second__item radio__item">
+							<input
+								type="radio"
+								name="step2"
+								id="radio2"
+								value="Личные нужды"
+							/>
+							<label for="radio2">
+								<h3 class="second__item-title radio__item-title">
+									Личные нужды
+								</h3>
+								<span class="second__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="second__item radio__item">
+							<input type="radio" name="step2" id="radio3" value="Автомобиль" />
+							<label for="radio3">
+								<h3 class="second__item-title radio__item-title">Автомобиль</h3>
+								<span class="second__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="second__item radio__item">
+							<input type="radio" id="radio4" name="step2" value="Бизнес" />
+							<label for="radio4">
+								<h3 class="second__item-title radio__item-title">Бизнес</h3>
+								<span class="second__item-round radio__item-round"></span>
+							</label>
+						</div>
+					</div>
+					<div class="quiz__step third radio">
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio1"
+								value="Никогда не брал кредитов"
+								checked
+							/>
+							<label for="third-radio1">
+								<h3 class="third__item-title radio__item-title">
+									Никогда не брал кредитов
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio2"
+								value="Кредиты закрыты, просрочек не было"
+								checked
+							/>
+							<label for="third-radio2">
+								<h3 class="third__item-title radio__item-title">
+									Кредиты закрыты, просрочек не было
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio3"
+								value="Земельный участок"
+								checked
+							/>
+							<label for="third-radio3">
+								<h3 class="third__item-title radio__item-title">
+									Кредиты есть, просрочек нет
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio4"
+								value="Кредиты закрыты, просрочки были"
+								checked
+							/>
+							<label for="third-radio4">
+								<h3 class="third__item-title radio__item-title">
+									Кредиты закрыты, просрочки были
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio5"
+								value="Просрочки были, сейчас нет"
+								checked
+							/>
+							<label for="third-radio5">
+								<h3 class="third__item-title radio__item-title">
+									Просрочки были, сейчас нет
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="third__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="third-radio6"
+								value="Просрочки сейчас есть"
+								checked
+							/>
+							<label for="third-radio6">
+								<h3 class="third__item-title radio__item-title">
+									Просрочки сейчас есть
+								</h3>
+								<span class="third__item-round radio__item-round"></span>
+							</label>
+						</div>
+					</div>
+					<div class="quiz__step fourth radio">
+						<div class="fourth__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="fourth-radio1"
+								value="Без залога"
+								checked
+							/>
+							<label for="fourth-radio1">
+								<h3 class="fourth__item-title radio__item-title">Без залога</h3>
+								<span class="fourth__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="fourth__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="fourth-radio2"
+								value="Дом"
+								checked
+							/>
+							<label for="fourth-radio2">
+								<h3 class="fourth__item-title radio__item-title">Дом</h3>
+								<span class="fourth__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="fourth__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="fourth-radio3"
+								value="Земельный участок"
+								checked
+							/>
+							<label for="fourth-radio3">
+								<h3 class="fourth__item-title radio__item-title">
+									Земельный участок
+								</h3>
+								<span class="fourth__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="fourth__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="fourth-radio4"
+								value="Квартира"
+								checked
+							/>
+							<label for="fourth-radio4">
+								<h3 class="fourth__item-title radio__item-title">Квартира</h3>
+								<span class="fourth__item-round radio__item-round"></span>
+							</label>
+						</div>
+						<div class="fourth__item radio__item">
+							<input
+								type="radio"
+								name="step3"
+								id="fourth-radio5"
+								value="Автомобиль/ПТС"
+								checked
+							/>
+							<label for="fourth-radio5">
+								<h3 class="fourth__item-title radio__item-title">
+									Автомобиль/ПТС
+								</h3>
+								<span class="fourth__item-round radio__item-round"></span>
+							</label>
+						</div>
+					</div>
+					<div class="quiz__step">Шаг 5</div>
+					<button class="quiz__btn">Следующий шаг</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>

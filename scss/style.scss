@@ -1,0 +1,260 @@
+@import './fonts';
+@import './reset';
+
+:root {
+	--white: #f9f9f9;
+	--black: #212121;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: var(--black);
+	background-color: var(--white);
+	scroll-behavior: smooth;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.quiz {
+	&__inner {
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0 20px 30px 0 rgba(117, 139, 175, 0.15);
+		border: solid 1px #eef2f4;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+	}
+
+	&__subtitle {
+		margin-top: 15px;
+	}
+
+	&__steps {
+		margin: 0 50px;
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		border-radius: 10px;
+		border: 1px solid rgba(184, 203, 218, 0.5);
+
+		&-item {
+			flex: 1 1 auto;
+			padding: 15px 0;
+			font-size: 14px;
+			font-weight: 500;
+			color: #b8cbda;
+			text-align: center;
+			background: rgba(184, 203, 218, 0.2);
+
+			&:not(:last-child) {
+				border-right: 1px solid rgba(184, 203, 218, 0.5);
+			}
+
+			&--active {
+				color: #fff;
+				background: #b3e75e;
+			}
+		}
+	}
+
+	&__step {
+		margin: 30px 50px 0;
+		display: none;
+
+		&--active {
+			display: block;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__slider {
+		padding: 20px 15px;
+		border-radius: 10px;
+		border: 1px dashed #b3e75e;
+
+		&:first-child {
+			margin-bottom: 30px;
+		}
+
+		&-title {
+			font-size: 18px;
+			text-align: center;
+		}
+
+		&-bot {
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			&-title {
+				flex: 1 1 auto;
+				font-size: 16px;
+			}
+
+			&-sum {
+				flex: 0 1 150px;
+				max-width: 150px;
+				max-height: 50px;
+				padding: 15px 15px;
+				font-size: 16px;
+				border: 1px solid #748c9f;
+				border-radius: 10px;
+			}
+
+			&-range {
+				flex: 1 1 100%;
+			}
+		}
+
+		&-range {
+			&-input {
+				width: 100%;
+			}
+		}
+	}
+
+	&__btn {
+		width: 160px;
+		margin: 30px auto 0;
+		padding: 15px;
+		font-weight: 500;
+		font-size: 16px;
+		color: #fff;
+		transition: all 0.3s;
+		border-radius: 10px;
+		border: 1px solid #6973e4;
+		background: #6973e4;
+
+		&:hover {
+			color: #000;
+			background: #fff;
+			border: 1px solid #b3e75e;
+		}
+	}
+
+	.second {
+		&.quiz__step--active {
+			display: flex !important;
+			justify-content: space-between;
+		}
+	}
+
+	.third {
+		&.quiz__step--active {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+		}
+
+		&__item {
+			label {
+				height: 100%;
+			}
+		}
+	}
+
+	.fourth {
+		&.quiz__step--active {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: 30px;
+			row-gap: 30px;
+		}
+
+		&__item {
+			flex: 0 1 calc(33% - 30px) !important;
+		}
+	}
+
+	.radio {
+		&__item {
+			flex: 0 1 170px;
+
+			input {
+				display: none;
+			}
+
+			label {
+				display: block;
+				padding: 30px 10px;
+				border-radius: 10px;
+				border: 1px dashed #b3e75e;
+				cursor: pointer;
+				position: relative;
+
+				&::before {
+					content: '';
+					width: 30px;
+					height: 30px;
+				}
+			}
+
+			input:checked + label {
+				border: 1px solid #b3e75e;
+			}
+
+			input:checked + label .radio__item-round {
+				background: #a2d948;
+				box-shadow: 0 0 0 1px #a2d948, 0 2.8px 2.2px 0 rgba(0, 0, 0, 0.02),
+					0 6.7px 5.3px 0 rgba(0, 0, 0, 0.03),
+					0 12.5px 10px 0 rgba(0, 0, 0, 0.04),
+					0 22.3px 17.9px 0 rgba(0, 0, 0, 0.04),
+					0 41.8px 33.4px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0);
+			}
+
+			input:checked + label .radio__item-round::before {
+				background: #fff;
+			}
+
+			&-title {
+				font-size: 18px;
+				font-weight: 500;
+				text-align: center;
+			}
+
+			&-round {
+				display: block;
+				width: 30px;
+				height: 30px;
+				margin: 30px auto 0;
+				border: 1px solid #a2d948;
+				border-radius: 50%;
+				background: #fff;
+				position: relative;
+
+				&::before {
+					content: '';
+					width: 12px;
+					height: 12px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					border-radius: 50%;
+					background: #a2d948;
+				}
+			}
+		}
+	}
+}
