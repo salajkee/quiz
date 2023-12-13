@@ -32,11 +32,16 @@ let currentStep = 0
 nextBtn.addEventListener('click', () => {
 	currentStep++
 
-	// console.log(quizStep)
-
 	quizStep.forEach(item => {
 		if (item.classList.contains('quiz__step--active')) {
 			item.classList.remove('quiz__step--active')
+		}
+	})
+
+	quizStepsItem.forEach(item => {
+		if (item.classList.contains('quiz__steps-item--active')) {
+			item.classList.remove('quiz__steps-item--active')
+			item.classList.add('quiz__steps-item--done')
 		}
 	})
 
